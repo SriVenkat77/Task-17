@@ -12,7 +12,7 @@ MyApp is a React application that allows users to manage a list of users with CR
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/myapp.git
+   git clone https://github.com/SriVenkat77/Task-17.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -22,6 +22,7 @@ MyApp is a React application that allows users to manage a list of users with CR
    ```bash
    npm install
    ```
+   
 4. Run the application:
    ```bash
    npm start
