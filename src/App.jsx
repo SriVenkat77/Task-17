@@ -21,14 +21,15 @@ function App() {
   useEffect(() => {
     fetchUsers();
   }, []);
-
+// Fetch users from the API and set the state with the response data
   const fetchUsers = async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-    setUsers(response.data);
+    setUsers(response.data);  // Update the users state with the fetched data
   };
 
+// Handle input changes and update the currentUser state accordingly
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; // Update the relevant field in currentUser
     
     if (name.includes('.')) {
       const keys = name.split('.');
@@ -48,28 +49,29 @@ function App() {
     }
   };
 
+// Add a new user by posting to the API and update the users state
   const addUser = async () => {
     const response = await axios.post('https://jsonplaceholder.typicode.com/users', currentUser);
     setUsers([...users, response.data]);
     resetForm();
   };
-
+// Set the form with the details of the user to be edited
   const editUser = (user) => {
     setEditing(true);
     setCurrentUser(user);
   };
-
+// Update the existing user's data in the API and update the state
   const updateUser = async () => {
     const response = await axios.put(`https://jsonplaceholder.typicode.com/users/${currentUser.id}`, currentUser);
     setUsers(users.map(user => (user.id === currentUser.id ? response.data : user)));
     resetForm();
   };
-
+// Delete a user from the API and update the state
   const deleteUser = async (id) => {
     await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
     setUsers(users.filter(user => user.id !== id));
   };
-
+// Reset the form to its initial state
   const resetForm = () => {
     setEditing(false);
     setCurrentUser({
