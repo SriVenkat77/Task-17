@@ -1,8 +1,46 @@
-# React + Vite
+# MyApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MyApp is a React application that allows users to manage a list of users with CRUD operations.
 
-Currently, two official plugins are available:
+## Features
+- View user list
+- Add new user
+- Edit existing user
+- Delete user
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/myapp.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd myapp
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the application:
+   ```bash
+   npm start
+   ```
+
+## Usage
+
+After running the application, you can view the user list, add, edit, and delete users.
+
+## Technologies Used
+- React
+- Axios
+- Bootstrap
+
+## Contributing
+git add .
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
